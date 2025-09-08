@@ -2,80 +2,118 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Deportes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de Deportes: Fútbol, Tenis y NBA con noticias, jugadores, rankings y multimedia">
+  <title>Portal de Deportes</title>
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      background: #f2f2f2; 
-      text-align: center; 
-    }
-    h1 { 
-      background: #004080; 
-      color: white; 
-      padding: 15px; 
-      border-radius: 8px; 
-    }
-    ul { 
-      list-style: none; 
-      padding: 0; 
-      margin: 40px auto; 
-      display: flex; 
-      justify-content: center; 
-      gap: 80px; 
-    }
-    li { 
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-    }
-    a { 
-      text-decoration: none; 
-      color: #004080; 
-      font-weight: bold; 
-      margin-top: 15px; 
-      font-size: 22px; 
-    }
-    a:hover { 
-      color: #ff6600; 
-    }
-    .icon-box {
-      width: 220px;   /* ancho fijo */
-      height: 220px;  /* alto fijo */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-    .icon-box img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain; /* ajusta la imagen dentro del contenedor */
-    }
+    body { font-family: Arial, sans-serif; margin:0; background:#f2f2f2; }
+    header, footer { background:#004080; color:white; padding:15px; text-align:center; }
+    nav ul { list-style:none; display:flex; justify-content:center; padding:0; margin:0; gap:20px; }
+    nav a { color:white; text-decoration:none; font-weight:bold; }
+    main { padding:20px; text-align:center; }
+    section { margin:40px 0; }
+    .icon-box { width:220px; height:220px; display:flex; justify-content:center; align-items:center; background:white; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.15); margin:auto; }
+    .icon-box img { max-width:100%; max-height:100%; object-fit:contain; }
+    form { background:white; padding:20px; max-width:500px; margin:auto; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:left; }
+    label { display:block; margin-top:10px; font-weight:bold; }
+    input, select, textarea { width:100%; padding:8px; margin-top:4px; border-radius:4px; border:1px solid #ccc; }
+    button { margin-top:12px; padding:10px 15px; background:#004080; color:white; border:none; border-radius:6px; cursor:pointer; }
+    button:hover { background:#ff6600; }
   </style>
 </head>
 <body>
-  <h1>Bienvenido al portal de Deportes de Alex</h1>
-  <ul>
-    <li>
+
+<header>
+  <h1>Portal de Deportes</h1>
+  <nav>
+    <ul>
+      <li><a href="futbol.html">Fútbol</a></li>
+      <li><a href="tenis.html">Tenis</a></li>
+      <li><a href="nba.html">NBA</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section id="deportes">
+    <h2>Explora nuestros deportes</h2>
+    <article>
+      <h3>Fútbol</h3>
       <div class="icon-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt="Fútbol">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt="Balón de fútbol">
       </div>
-      <a href="futbol.html">Fútbol</a>
-    </li>
-    <li>
+      <p>Conoce competiciones, ligas y jugadores destacados del fútbol mundial.</p>
+      <a href="futbol.html">Ir a Fútbol</a>
+    </article>
+
+    <article>
+      <h3>Tenis</h3>
       <div class="icon-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/5210/5210328.png" alt="Tenis">
+        <img src="https://cdn-icons-png.flaticon.com/512/5210/5210328.png" alt="Pelota de tenis">
       </div>
-      <a href="tenis.html">Tenis</a>
-    </li>
-    <li>
+      <p>Descubre reglas, tipos de cancha, torneos y rankings ATP/WTA.</p>
+      <a href="tenis.html">Ir a Tenis</a>
+    </article>
+
+    <article>
+      <h3>NBA</h3>
       <div class="icon-box">
-        <img src="https://logos-world.net/wp-content/uploads/2020/11/NBA-Logo.png" alt="NBA">
+        <img src="https://logos-world.net/wp-content/uploads/2020/11/NBA-Logo.png" alt="Logo NBA">
       </div>
-      <a href="nba.html">NBA</a>
-    </li>
-  </ul>
+      <p>Últimos campeones, jugadores franquicia y estadísticas de la NBA.</p>
+      <a href="nba.html">Ir a NBA</a>
+    </article>
+  </section>
+
+  <section id="multimedia">
+    <h2>Multimedia</h2>
+    
+    <section id="video-recomendado">
+  <h2>Video Recomendado</h2>
+  <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/gRByPWn7oaQ"
+          title="SportsCenter Top 10 Sports Highlights – Jul 21, 2025"
+          frameborder="0" allowfullscreen>
+  </iframe>
+</section>
+
+  </section>
+
+  <section id="contacto">
+    <h2>Formulario de contacto</h2>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="ejemplo@mail.com" required>
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" placeholder="Tu edad" required>
+
+      <label for="deporte">Deporte favorito:</label>
+      <select id="deporte" name="deporte" required>
+        <option value="">Selecciona uno</option>
+        <option value="futbol">Fútbol</option>
+        <option value="tenis">Tenis</option>
+        <option value="nba">NBA</option>
+      </select>
+
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</main>
+
+
+
+<footer>
+  <p>&copy; 2025 Portal de Deportes. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
